@@ -1,0 +1,132 @@
+h1. Map, Reduce, Fold, and Bananas for ColdFusion 9
+
+Simple _functional_ approach for recursively applying a given function to each element of a collection (array, list, or struct).  One common view is to think of passing a function to some data, rather than passing the data to a function. Example (included in source):
+
+<pre> 
+/**
+* Recursively increments each numeric value in the collection (array,list,or struct). 
+*/
+public function inc(any collection){
+  return mapper.apply(_inc,collection);
+}
+...
+
+/**
+* The function to apply to each element of the collection. If the value is not numeric, 
+* inc() just returns the value. Note that in languages that support lambda functions ,
+* the definition of the function is frequently specific in-line with the map. However,  
+* with ColdFusion, you need to write an _external_ function. This is not bad, and allows 
+* the function to be tested directly.
+*/
+public function _inc(any val){
+ if( isNumeric(val) ) return ++val;
+ return val;
+}
+
+...
+
+//Usage:
+function incrementEachNumericInAnArray(){
+	var original = [ 1,2,3 ];
+	var new_data = mr.inc(a);
+	assert( new_data[1] ==2 && new_data[2] ==3 && new_data[3] ==4  );
+}
+
+
+</pre>
+
+
+h3. Goals
+
+# Functions do not alter any arguments
+# Functions return *new* objects (see #1)
+# Functions act recursively on all collections
+# Functions do not depend on instance data and can be wired or mixed in
+# Functions use as few possible local variables in functions to minimize use of state
+
+h3. Known Issues
+
+# Ordering of resultant new collections is non-deterministic
+
+h2. Function summary (alphabetical):
+
+
+h3. @boolean  all(string predicate, any collection)@
+
+bq.. Returns true if _every_ element in the collection satisfies the predicate.
+
+
+
+h3. @boolean any(string predicate, any collection)@
+
+bq. Returns true if _any_ element in the collection satisfies the predicate.
+
+
+
+h3. @array struct :: apply(any a_function, any collection)@
+
+bq. Applies a_function to every element in the collection and returns a new collection
+
+
+
+h3. @boolean exists(string predicate, any collection)@
+
+bq. Returns true if at least one element in the collection satisfies the predicate
+
+
+
+h3. @numeric  count(string predicate, any collection)@
+
+bq. Returns the number of elements in this collection that satisfies the predicate
+
+
+
+h3. @void foreach(any a_function, any collection)@
+
+bq. Executes a_function for every element in the collection. Does not return a value.
+
+
+
+h3. @numeric foldLeft(array a, string operator, numeric start)@
+
+bq. _Folds_ all elements of this array starting at the left into a new array using @operator@ (+ or *) and @start@ as the initial value
+
+
+
+h3. @numeric   foldRight(array a, string operator, numeric start)@
+
+bq. _Folds_ all elements of this array starting at the right into a new array using @operator@ (+ or *) and @start@ as the initial value
+
+
+
+h3. @numeric reduceLeft(array a, string operator, numeric start)@
+
+bq. _Reduces_ all elements of this array starting at the left into a new array using @operator@ (+ or *) and @start@ as the initial value
+
+
+
+h3. @numeric reduceRight(array a, string operator, numeric start)@
+
+bq. _Reduces_ all elements of this array starting at the right into a new array using @operator@ (+ or *) and @start@ as the initial value
+
+
+
+h3. @[array|struct] flatten(array a)@
+
+bq. Flattens all elements of this array into a new 1 dimensional array
+
+
+
+h3. @[array|struct] concat(any a1, any a2, ..any aN)@
+
+bq. Concatenates N collections into a single collection (arrays and structs) 
+
+
+
+h3. @[array|struct]  filter(string predicate, any collection)@
+
+bq. Creates  new collection based on all elements in the collection that satisfy the predicate
+
+
+
+<hr>
