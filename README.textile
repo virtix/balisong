@@ -1,4 +1,4 @@
-h1. Balisong: Map, Reduce, Fold, and Banana slicer for ColdFusion 9
+h1. Balisong: Map, Reduce, Fold, and banana slicer for ColdFusion 9
 
 Simple _functional_ approach for recursively applying a given function to each element of a collection (array, list, or struct).  One common view is to think of passing a function to some data, rather than passing the data to a function. Example (included in source):
 
@@ -7,7 +7,7 @@ Simple _functional_ approach for recursively applying a given function to each e
 * Recursively increments each numeric value in the collection (array,list,or struct). 
 */
 public function inc(any collection){
-  return mapper.apply(_inc,collection);
+  return balisong.apply(_inc,collection);
 }
 ...
 
@@ -111,7 +111,7 @@ bq. _Reduces_ all elements of this array starting at the right into a new array 
 
 
 
-h3. @[array|struct] flatten(array a)@
+h3. @[array|struct] flatten(any collection)@
 
 bq. Flattens all elements of this array into a new 1 dimensional array
 
