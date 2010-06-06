@@ -4,7 +4,7 @@
 // should always be apply function to data
 // or in the case of data, apply predicate to data
 
-mapper = createObject("component", "MapReduce");
+mapper = createObject("component", "Balisong");
 a =  [ 1,2,3,[4],[5,6,[7,8]],[11,[12],13,[14,[15,'deep nested string','0xAC3B',[16]]]],-1,'abc','xyz' ];
 filtered_byint_a =  [ 1,2,3,[4],[5,6,[7,8]],[11,[12],13,[14,[15,'0xAC3B',[16]]]],-1 ];
 
