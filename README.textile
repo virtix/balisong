@@ -14,9 +14,9 @@ public function inc(any collection){
 /**
 * The function to apply to each element of the collection. If the value is not numeric, 
 * inc() just returns the value. Note that in languages that support lambda functions ,
-* the definition of the function is frequently specific in-line with the map. However,  
-* with ColdFusion, you need to write an _external_ function. This is not bad, and allows 
-* the function to be tested directly.
+* the definition of the function is frequently specified in-line with the call to apply. However,  
+* with ColdFusion, you need to write an _external_ function. This is not necessarily a bad thing,
+* as it allows the function being applied to the data to be tested directly.
 */
 public function _inc(any val){
  if( isNumeric(val) ) return ++val;
