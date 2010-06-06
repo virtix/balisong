@@ -104,21 +104,21 @@ bq. _Folds_ all elements of this array starting at the left into a new array usi
 
 <br/>
 
-h3. @numeric   foldRight(array a, string operator, numeric start)@
+h3. @[numeric]   foldRight(array a, string operator, numeric start)@
 
 bq. _Folds_ all elements of this array starting at the right into a new array using @operator@ (+ or *) and @start@ as the initial value
 
 
 <br/>
 
-h3. @numeric   reduceLeft(array a, string operator, numeric start)@
+h3. @[numeric]   reduceLeft(array a, string operator, numeric start)@
 
 bq. _Reduces_ all elements of this array starting at the left into a new array using @operator@ (+ or *) and @start@ as the initial value
 
 
 <br/>
 
-h3. @numeric   reduceRight(array a, string operator, numeric start)@
+h3. @[numeric]   reduceRight(array a, string operator, numeric start)@
 
 bq. _Reduces_ all elements of this array starting at the right into a new array using @operator@ (+ or *) and @start@ as the initial value
 
