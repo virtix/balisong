@@ -1,5 +1,5 @@
 <cfcomponent output="false" extends="mxunit.framework.TestCase">
-<cfscript>	
+<cfscript>
 
 // should always be apply function to data
 // or in the case of data, apply predicate to data
@@ -239,48 +239,48 @@ function $testFoldLeft(){
 
 
 function $reduceRightNDArrayTest(){
-	 var a = [1,2,3,[4,[5]]];//[3,[4,5]]];
-	 actual = balisong.reduceRight(a,'+');
-	 debug(actual);
-	 assertEquals(15,actual);
-	 actual = balisong.reduceRight(a,'*'); 
-	 debug(actual);
-	 assertEquals(120,actual);
+ var a = [1,2,3,[4,[5]]];//[3,[4,5]]];
+ actual = balisong.reduceRight(a,'+');
+ debug(actual);
+ assertEquals(15,actual);
+ actual = balisong.reduceRight(a,'*'); 
+ debug(actual);
+ assertEquals(120,actual);
 }
 
 
 function $reduceRight1DArrayTest(){
-	 var a = [1,2,3,4,5];
-	 actual = balisong.reduceRight(a,'+');
-	 debug(actual);
-	 assertEquals(15,actual);
-	 
-	 actual = balisong.reduceRight(a,'*'); 
-	 debug(actual);
-	 assertEquals(120,actual);
+ var a = [1,2,3,4,5];
+ actual = balisong.reduceRight(a,'+');
+ debug(actual);
+ assertEquals(15,actual);
+ 
+ actual = balisong.reduceRight(a,'*'); 
+ debug(actual);
+ assertEquals(120,actual);
 }
 
 
 function $reduceLeft1DArrayTest(){
-	 var a = [1,2,3,4,5];
-	 actual = balisong.reduceLeft(a,'+');
-	 debug(actual);
-	 assertEquals(15,actual);
-	 
-	 actual = balisong.reduceLeft(a,'*'); 
-	 debug(actual);
-	 assertEquals(120,actual);
+ var a = [1,2,3,4,5];
+ actual = balisong.reduceLeft(a,'+');
+ debug(actual);
+ assertEquals(15,actual);
+ 
+ actual = balisong.reduceLeft(a,'*'); 
+ debug(actual);
+ assertEquals(120,actual);
 }
 
 
 function $reduceLeftNDArrayTest(){
-	 var a = [1,2,3,[4,[5]]];//[3,[4,5]]];
-	 actual = balisong.reduceLeft(a,'+');
-	 debug(actual);
-	 assertEquals(15,actual);
-	 actual = balisong.reduceLeft(a,'*'); 
-	 debug(actual);
-	 assertEquals(120,actual);
+ var a = [1,2,3,[4,[5]]];//[3,[4,5]]];
+ actual = balisong.reduceLeft(a,'+');
+ debug(actual);
+ assertEquals(15,actual);
+ actual = balisong.reduceLeft(a,'*'); 
+ debug(actual);
+ assertEquals(120,actual);
 }
 
 
@@ -301,9 +301,9 @@ function testForEach(){
 }
 
 function incrementEachNumericInAnArray(){
-	var a = [ 1,2,3,[4],[5,6,[7,8]],[11,[12],13,[14,[15,'0xAC3B',[16]]]], -1,'abc','xyz', {foo='bar'} ];
-	var b = balisong.inc(a);
-	debug(b);
+var a = [ 1,2,3,[4],[5,6,[7,8]],[11,[12],13,[14,[15,'0xAC3B',[16]]]], -1,'abc','xyz', {foo='bar'} ];
+var b = balisong.inc(a);
+debug(b);
 }
 
 function __flatternAnArray(){
