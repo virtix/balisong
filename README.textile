@@ -54,6 +54,8 @@ h4. Pull requests welcome!
 
 h2. Function summary (alphabetical):
 
+See the "Balisong Wiki Page":http://wiki.github.com/virtix/balisong/banana-slicing-examples  for examples
+
 
 h3. @[boolean]  all(string predicate, any collection)@
 
