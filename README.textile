@@ -65,35 +65,35 @@ bq. Returns true if _any_ element in the collection satisfies the predicate.
 
 <br/>
 
-h3. @array struct :: apply(any a_function, any collection)@
+h3. @[array|struct] apply(any a_function, any collection)@
 
 bq. Applies a_function to every element in the collection and returns a new collection
 
 
 <br/>
 
-h3. @boolean exists(string predicate, any collection)@
+h3. @boolean   exists(string predicate, any collection)@
 
 bq. Returns true if at least one element in the collection satisfies the predicate
 
 
 <br/>
 
-h3. @numeric  count(string predicate, any collection)@
+h3. @numeric   count(string predicate, any collection)@
 
 bq. Returns the number of elements in this collection that satisfies the predicate
 
 
 <br/>
 
-h3. @void foreach(any a_function, any collection)@
+h3. @void   foreach(any a_function, any collection)@
 
 bq. Executes a_function for every element in the collection. Does not return a value.
 
 
 <br/>
 
-h3. @numeric foldLeft(array a, string operator, numeric start)@
+h3. @numeric   foldLeft(array a, string operator, numeric start)@
 
 bq. _Folds_ all elements of this array starting at the left into a new array using @operator@ (+ or *) and @start@ as the initial value
 
@@ -107,35 +107,35 @@ bq. _Folds_ all elements of this array starting at the right into a new array us
 
 <br/>
 
-h3. @numeric reduceLeft(array a, string operator, numeric start)@
+h3. @numeric   reduceLeft(array a, string operator, numeric start)@
 
 bq. _Reduces_ all elements of this array starting at the left into a new array using @operator@ (+ or *) and @start@ as the initial value
 
 
 <br/>
 
-h3. @numeric reduceRight(array a, string operator, numeric start)@
+h3. @numeric   reduceRight(array a, string operator, numeric start)@
 
 bq. _Reduces_ all elements of this array starting at the right into a new array using @operator@ (+ or *) and @start@ as the initial value
 
 
 <br/>
 
-h3. @[array] flatten(array collection)@
+h3. @[array]   flatten(array collection)@
 
 bq. Flattens all elements of this array into a new 1 dimensional array
 
 
 <br/>
 
-h3. @[array|struct] concat(any a1, any a2, ..any aN)@
+h3. @[array|struct]    concat(any a1, any a2, ..any aN)@
 
 bq. Concatenates N collections into a single collection (arrays and structs) 
 
 
 <br/>
 
-h3. @[array|struct]  filter(string predicate, any collection)@
+h3. @[array|struct]    filter(string predicate, any collection)@
 
 bq. Creates  new collection based on all elements in the collection that satisfy the predicate
 
