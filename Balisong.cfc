@@ -193,6 +193,7 @@
 	  return ( isStruct(coll) || isArray(coll) );
 	}
 	
+	
 	private function _applyStruct(any func, any col){
 		var item = chr(0);
 	 	var _s = {};

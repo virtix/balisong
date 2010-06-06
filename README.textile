@@ -56,12 +56,14 @@ h3. @boolean  all(string predicate, any collection)@
 bq.. Returns true if _every_ element in the collection satisfies the predicate.
 
 
+<br/>
 
 h3. @boolean any(string predicate, any collection)@
 
 bq. Returns true if _any_ element in the collection satisfies the predicate.
 
 
+<br/>
 
 h3. @array struct :: apply(any a_function, any collection)@
 
@@ -111,7 +113,7 @@ bq. _Reduces_ all elements of this array starting at the right into a new array 
 
 
 
-h3. @[array|struct] flatten(any collection)@
+h3. @[array] flatten(array collection)@
 
 bq. Flattens all elements of this array into a new 1 dimensional array
 
