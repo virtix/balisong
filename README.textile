@@ -47,18 +47,22 @@ h3. Goals
 h3. Known Issues
 
 # Ordering of resultant new collections is non-deterministic
+# Lists are still returned as an array
+# Some functions that could work on structs, too, still only work on arrays
+
+h4. Pull requests welcome!
 
 h2. Function summary (alphabetical):
 
 
-h3. @boolean  all(string predicate, any collection)@
+h3. @[boolean]  all(string predicate, any collection)@
 
 bq. Returns true if _every_ element in the collection satisfies the predicate.
 
 
 <br/>
 
-h3. @boolean any(string predicate, any collection)@
+h3. @[boolean]  any(string predicate, any collection)@
 
 bq. Returns true if _any_ element in the collection satisfies the predicate.
 
@@ -72,28 +76,28 @@ bq. Applies a_function to every element in the collection and returns a new coll
 
 <br/>
 
-h3. @boolean   exists(string predicate, any collection)@
+h3. @[boolean]   exists(string predicate, any collection)@
 
 bq. Returns true if at least one element in the collection satisfies the predicate
 
 
 <br/>
 
-h3. @numeric   count(string predicate, any collection)@
+h3. @[numeric]   count(string predicate, any collection)@
 
 bq. Returns the number of elements in this collection that satisfies the predicate
 
 
 <br/>
 
-h3. @void   foreach(any a_function, any collection)@
+h3. @[void]   foreach(any a_function, any collection)@
 
-bq. Executes a_function for every element in the collection. Does not return a value.
+bq. Executes a_function for every element in the collection. Does not return a value. *WARNING: This _can_ mutate the original collections argument.*
 
 
 <br/>
 
-h3. @numeric   foldLeft(array a, string operator, numeric start)@
+h3. @[numeric]   foldLeft(array a, string operator, numeric start)@
 
 bq. _Folds_ all elements of this array starting at the left into a new array using @operator@ (+ or *) and @start@ as the initial value
 
