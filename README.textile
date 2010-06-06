@@ -1,4 +1,4 @@
-h1. Map, Reduce, Fold, and Bananas for ColdFusion 9
+h1. Balisong: Map, Reduce, Fold, and Banana slicer for ColdFusion 9
 
 Simple _functional_ approach for recursively applying a given function to each element of a collection (array, list, or struct).  One common view is to think of passing a function to some data, rather than passing the data to a function. Example (included in source):
 
